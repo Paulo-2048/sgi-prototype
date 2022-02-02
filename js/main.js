@@ -2,7 +2,7 @@ if (window.Cookies.get("token")) {
 	console.log('Logged')
 } 
 else {
-	window.location.replace = "https://sgi-prototype.vercel.app/login.html"
+	window.location.replace('https://sgi-prototype.vercel.app/login.html')
 }
 
 const h1Text = document.querySelector("#test-header")
