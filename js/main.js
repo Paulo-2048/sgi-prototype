@@ -1,8 +1,10 @@
-try {
-  window.Cookies.get("token")
-} catch (e) {
-  window.location.replace = "../login.html"
+if (window.Cookies.get("token")) {
+	console.log('Logged')
+} 
+else {
+	window.location.replace = "../login.html"
 }
+
 const h1Text = document.querySelector("#test-header")
 window.axios
   .get("https://sgi-prototype-api.vercel.app/")
