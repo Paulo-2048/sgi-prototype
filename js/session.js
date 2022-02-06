@@ -6,7 +6,7 @@ login.addEventListener('click', () => {
   localStorage.setItem('email', email)
   localStorage.setItem('senha', password)
   
-  window.axios
+window.axios
   .post("https://sgi-prototype-api.vercel.app/user/login", {
       email: email,
       password: password
