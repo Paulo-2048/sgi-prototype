@@ -1,7 +1,9 @@
 const email = document.querySelector('#inputEmail')
 const password = document.querySelector('#inputPassword')
+const login = document.querySelector('#login-btn')
 
-window.axios
+login.addEventListener('click', () => {
+  window.axios
   .post("https://sgi-prototype-api.vercel.app/user/login", {
       email: email,
       password: password
@@ -14,3 +16,4 @@ window.axios
     // handle error
     console.error(error)
   })
+})
