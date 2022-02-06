@@ -6,6 +6,7 @@ else {
 }
 
 const h1Text = document.querySelector("#test-header")
+
 window.axios
   .get("https://sgi-prototype-api.vercel.app/")
   .then(function (response) {
