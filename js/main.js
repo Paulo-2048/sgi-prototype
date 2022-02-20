@@ -17,7 +17,6 @@ try {
   if (cksAcess == "NA") {
     throw "Não Autorizado"
   } else {
-    window.location.assign("https://sgi-prototype.vercel.app/")
   }
 } catch (error) {
   window.location.replace("https://sgi-prototype.vercel.app/login.html")

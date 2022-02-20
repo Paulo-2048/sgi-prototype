@@ -17,6 +17,6 @@ login.addEventListener("click", () => {
     .catch((error) => {
       // handle error
       console.error(error)
-      alert('Usúario não encontrado"')
+      alert('Usuário não encontrado"')
     })
 })
