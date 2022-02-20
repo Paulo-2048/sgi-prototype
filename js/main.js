@@ -21,7 +21,7 @@ window.axios
 
 // try {
 //   let cks = window.Cookies.get("userData")
-//   console.log(cks)
+//   console.log(cks.ema)
 //   window.axios
 //     .post("https://sgi-prototype-api.vercel.app/user/login", {
 //       email: email,
