@@ -12,12 +12,11 @@ login.addEventListener("click", () => {
     .then((response) => {
       console.log(response)
       window.Cookies.set("userData", JSON.stringify(response), { expires: 7 })
+      window.location.assign("https://sgi-prototype.vercel.app/")
     })
     .catch((error) => {
       // handle error
       console.error(error)
+      alert('Usúario não encontrado"')
     })
 })
-
-let cks = window.Cookies.get("userData")
-console.log(cks.email)
