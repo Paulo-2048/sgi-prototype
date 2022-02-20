@@ -1,9 +1,9 @@
-if (window.Cookies.get("token")) {
-	console.log('Logged')
-} 
-else {
-	window.location.replace('https://sgi-prototype.vercel.app/login.html')
-}
+// if (window.Cookies.get("token")) {
+//   console.log("Logged")
+// } else {
+//   window.location.replace("/login.html")
+//   // https://sgi-prototype.vercel.app
+// }
 
 const h1Text = document.querySelector("#test-header")
 
@@ -18,3 +18,20 @@ window.axios
     // handle error
     console.error(error)
   })
+
+// try {
+//   let cks = window.Cookies.get("userData")
+//   console.log(cks)
+//   window.axios
+//     .post("https://sgi-prototype-api.vercel.app/user/login", {
+//       email: email,
+//       password: password,
+//     })
+//     .then((response) => {})
+//     .catch((error) => {
+//       // handle error
+//       console.error(error)
+//     })
+// } catch (error) {
+//   console.error(error)
+// }
