@@ -11,9 +11,7 @@ login.addEventListener("click", () => {
     })
     .then((response) => {
       console.log(response)
-      window.Cookies.set("userData", response.data.data, { expires: 7 })
-      let cks = JSON.parse(window.Cookies.get("userData"))
-      console.log(cks, cks.email)
+      window.Cookies.set("userData", JSON.stringify(response), { expires: 7 })
     })
     .catch((error) => {
       // handle error
