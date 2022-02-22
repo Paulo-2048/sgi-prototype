@@ -1,5 +1,21 @@
 const h1Text = document.querySelector("#test-header")
 
+try {
+  document.querySelector("#logout-btn").addEventListener("click", () => {
+    Object.keys(Cookies.get()).forEach(function (cookieName) {
+      var neededAttributes = {
+        // Here you pass the same attributes that were used when the cookie was created
+        // and are required when removing the cookie
+      }
+      Cookies.remove(cookieName, neededAttributes)
+    })
+    window.location.replace("login.html")
+  })
+} catch (error) {
+  alert("Um erro foi encontrado")
+  console.error(error)
+}
+
 window.axios
   .get("https://sgi-prototype-api.vercel.app/")
   .then(function (response) {
