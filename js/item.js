@@ -53,7 +53,7 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
     newRow.insertCell(0).innerHTML = i.product_name
     newRow.insertCell(1).innerHTML = i.category
     newRow.insertCell(2).innerHTML = i.description
-    newRow.insertCell(3).innerHTML = i.price
+    newRow.insertCell(3).innerHTML = "R$", i.price
     newRow.insertCell(4).innerHTML = i.client
     newRow.insertCell(5).innerHTML = i.data
     }
