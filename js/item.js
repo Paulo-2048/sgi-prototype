@@ -39,6 +39,7 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
   .get("https://sgi-prototype-api.vercel.app/item")
   .then(function (response) {
     const items = response.data.data
+    return items
   })
   .catch(function (error) {
     console.error(error)
