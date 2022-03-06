@@ -35,11 +35,12 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
       $("#dataTable_item").DataTable()
     })
 
+    let itemsData
   window.axios
   .get("https://sgi-prototype-api.vercel.app/item")
   .then(function (response) {
     const items = response.data.data
-    return items
+    itemData = items
   })
   .catch(function (error) {
     console.error(error)
@@ -47,7 +48,7 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
 
     let tb = document.querySelector("#dataTable_item")
     let nRow = tb.rows.length
-    for (const i of items) {
+    for (let i of itemsData) {
       let newRow = tb.insertRow(nRow - 1)
     newRow.insertCell(0).innerHTML = i.product_name
     newRow.insertCell(1).innerHTML = i.category
