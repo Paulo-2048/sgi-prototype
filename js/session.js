@@ -10,7 +10,6 @@ login.addEventListener("click", () => {
       password: password,
     })
     .then((response) => {
-      console.log(response)
       window.Cookies.set("userData", JSON.stringify(response), { expires: 7 })
       window.location.assign("https://sgi-prototype.vercel.app/")
     })
