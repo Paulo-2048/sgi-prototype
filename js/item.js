@@ -29,24 +29,22 @@ if (location.href == "https://sgi-prototype.vercel.app/item-post.html") {
 
 // List all itens
 if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
-  let tb = document.querySelector("#dataTable_item")
-  let nRow = tb.rows.length
+  
   try {
     $(document).ready(function () {
       $("#dataTable_item").DataTable()
     })
 
-    const listItem = async () => {
-      let newRow = await tb.insertRow(nRow - 1)
-      newRow.insertCell(0).innerHTML = "OK0"
-      newRow.insertCell(1).innerHTML = "OK1"
-      newRow.insertCell(2).innerHTML = "OK2"
-      newRow.insertCell(3).innerHTML = "OK3"
-      newRow.insertCell(4).innerHTML = "OK4"
-      newRow.insertCell(5).innerHTML = "OK5"
-    }
+    let tb = document.querySelector("#dataTable_item")
+    let nRow = tb.rows.length
+    let newRow = await tb.insertRow(nRow - 1)
+    newRow.insertCell(0).innerHTML = "OK0"
+    newRow.insertCell(1).innerHTML = "OK1"
+    newRow.insertCell(2).innerHTML = "OK2"
+    newRow.insertCell(3).innerHTML = "OK3"
+    newRow.insertCell(4).innerHTML = "OK4"
+    newRow.insertCell(5).innerHTML = "OK5"
 
-    listItem()
   } catch (error) {
     console.error(error)
   }
