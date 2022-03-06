@@ -47,7 +47,9 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
 
     let tb = document.querySelector("#dataTable_item")
     let nRow = tb.rows.length
-    for (let i of JSON.parse(window.Cookies.get("itemData")).data.data) {
+    let ckItems = JSON.parse(window.Cookies.get("itemData"))
+    console.log(ckItems)
+    for (let i of ckItems.data.data) {
       let newRow = tb.insertRow(nRow - 1)
     newRow.insertCell(0).innerHTML = i.product_name
     newRow.insertCell(1).innerHTML = i.category
