@@ -3,8 +3,11 @@ document.querySelector("#item-post-btn").addEventListener("click", () => {
 
   window.axios
     .post("https://sgi-prototype-api.vercel.app/item", {
-      name: itemForm.item_name,
-      category: itemForm.item_category,
+      name: itemForm.item_name.value,
+      category: itemForm.item_category.value,
+      description: itemForm.item_description.value,
+      price: itemForm.item_price.value,
+      client: itemForm.item_client.value,
     })
     .then((response) => {
       alert("Postagem de item realizado com sucesso")
