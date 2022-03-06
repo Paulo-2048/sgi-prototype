@@ -1,5 +1,5 @@
 document.querySelector("#item-post-btn").addEventListener("click", () => {
-  let itemForm = document.querySelector("#item-post-btn")
+  let itemForm = document.querySelector("#item-post")
 
   window.axios
     .post("https://sgi-prototype-api.vercel.app/item", {
