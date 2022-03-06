@@ -14,6 +14,7 @@ if (location.href == "https://sgi-prototype.vercel.app/item-post.html") {
         })
         .then((response) => {
           alert("Postagem de item realizado com sucesso")
+          Cookies.remove('itemData')
           location.reload()
         })
         .catch((error) => {
@@ -39,6 +40,7 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
   window.axios
   .get("https://sgi-prototype-api.vercel.app/item")
   .then(function (response) {
+    Cookies.remove('itemData')
     window.Cookies.set("itemData", JSON.stringify(response), { expires: 7 })
   })
   .catch(function (error) {
