@@ -33,6 +33,16 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
     $(document).ready(function () {
       $("#dataTable_item").DataTable()
     })
+
+    let table = document.querySelector("#dataTable_item")
+    let nRow = table.rows.length
+    let newRow = table.insertRow(nRow)
+    newRow.insertCell(0).innerHTML = "OK0"
+    newRow.insertCell(1).innerHTML = "OK1"
+    newRow.insertCell(2).innerHTML = "OK2"
+    newRow.insertCell(3).innerHTML = "OK3"
+    newRow.insertCell(4).innerHTML = "OK4"
+    newRow.insertCell(5).innerHTML = "OK5"
   } catch (error) {
     console.error(error)
   }
