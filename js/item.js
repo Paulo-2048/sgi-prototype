@@ -35,15 +35,27 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
       $("#dataTable_item").DataTable()
     })
 
+  window.axios
+  .get("https://sgi-prototype-api.vercel.app/item")
+  .then(function (response) {
+    const items = response.data.data
+  })
+  .catch(function (error) {
+    console.error(error)
+  })
+
     let tb = document.querySelector("#dataTable_item")
     let nRow = tb.rows.length
-    let newRow = tb.insertRow(nRow - 1)
-    newRow.insertCell(0).innerHTML = "OK0"
-    newRow.insertCell(1).innerHTML = "OK1"
-    newRow.insertCell(2).innerHTML = "OK2"
-    newRow.insertCell(3).innerHTML = "OK3"
-    newRow.insertCell(4).innerHTML = "OK4"
-    newRow.insertCell(5).innerHTML = "OK5"
+    for (const i of items) {
+      let newRow = tb.insertRow(nRow - 1)
+    newRow.insertCell(0).innerHTML = i.product_name
+    newRow.insertCell(1).innerHTML = i.category
+    newRow.insertCell(2).innerHTML = i.description
+    newRow.insertCell(3).innerHTML = i.price
+    newRow.insertCell(4).innerHTML = i.client
+    newRow.insertCell(5).innerHTML = i.data
+    }
+    
 
   } catch (error) {
     console.error(error)
