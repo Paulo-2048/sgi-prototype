@@ -36,7 +36,7 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
 
     let table = document.querySelector("#dataTable_item")
     let nRow = table.rows.length
-    let newRow = table.insertRow(nRow)
+    let newRow = table.insertRow(nRow - 1)
     newRow.insertCell(0).innerHTML = "OK0"
     newRow.insertCell(1).innerHTML = "OK1"
     newRow.insertCell(2).innerHTML = "OK2"
