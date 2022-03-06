@@ -36,8 +36,8 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
       $("#dataTable_item").DataTable()
     })
 
-    async function listItems() {
-    await window.axios
+    let itemsData
+  window.axios
   .get("https://sgi-prototype-api.vercel.app/item")
   .then(function (response) {
     Cookies.remove('itemData')
@@ -47,9 +47,9 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
     console.error(error)
   })
 
-    let tb = await document.querySelector("#dataTable_item")
-    let nRow = await tb.rows.length
-    let ckItems = await JSON.parse(window.Cookies.get("itemData"))
+    let tb = document.querySelector("#dataTable_item")
+    let nRow = tb.rows.length
+    let ckItems = JSON.parse(window.Cookies.get("itemData"))
     for (let i of ckItems.data.data) {
       let newRow = tb.insertRow(nRow - 1)
     newRow.insertCell(0).innerHTML = i.product_name
@@ -59,8 +59,6 @@ if (location.href == "https://sgi-prototype.vercel.app/item-list.html") {
     newRow.insertCell(4).innerHTML = i.client
     newRow.insertCell(5).innerHTML = i.data
     }
-    }
-  
     
 
   } catch (error) {
